@@ -1,1 +1,6 @@
-/* CSS declarations go here */
+.state {background: #BBBBFF; border: solid 1px #BBBBFF;}
+.state h2 {text-align: center;}
+
+.task {background: #DDDDFF; border-bottom: solid 10px #BBBBFF; padding-top: 10px;}
+
+li {list-style: none;}
