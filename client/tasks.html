@@ -1,0 +1,13 @@
+<template name="tasks">
+{{# each tasks}}
+<div class="task row-fluid">
+  <div class="span9 offset1">
+    {{name}}
+  </div>
+  <div class="span2">
+    <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>    
+    <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a>
+  </div>
+</div>
+{{/each}}
+</template>

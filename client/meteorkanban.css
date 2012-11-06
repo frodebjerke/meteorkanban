@@ -1,0 +1,8 @@
+.state {background: #BBBBFF; border: solid 1px #BBBBFF;}
+.state h2 {text-align: center;}
+
+.addTask {padding-top: 15px;}
+
+.task {background: #DDDDFF; border-bottom: solid 10px #BBBBFF; padding-top: 10px;}
+
+li {list-style: none;}
