@@ -6,9 +6,12 @@ if (Meteor.isClient) {
     return Tasks.find({position: this.position});
   };
 
+  Template.tasks.highlight = function () {
+    return Session.equals("task_in_desc", this._id) ? "highlighted" : "";
+  };
+
   Template.tasks.events({
     'click .desc' : function () {
-      console.log("tasks event");
       Session.set("task_in_desc", this._id);
     }
   });

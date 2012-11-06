@@ -1,7 +1,7 @@
 if (Meteor.isClient) {
   
   Template.description.show = function () {
-    return Session.equals("task_in_desc", this._id) ? "" : 'hidden="hidden"';
+    return Session.equals("task_in_desc", this._id) ? "" : "hide";
   };
 
   Template.description.tasks = function () {
@@ -10,7 +10,6 @@ if (Meteor.isClient) {
 
   Template.description.events({
       'click .hideDesc' : function () {
-	console.log("desc event");
 	Session.set("task_in_desc", null);
       }
   });
