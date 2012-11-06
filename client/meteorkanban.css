@@ -4,6 +4,6 @@
 .addTask {padding-top: 15px;}
 
 .task {background: #DDDDFF; border-bottom: solid 10px #BBBBFF; padding-top: 10px;}
-.highlighted {background: #FFDDFF; font-weight: bold;}
+.highlighted {background: #DDFFFF; font-weight: bold;}
 
 li {list-style: none;}

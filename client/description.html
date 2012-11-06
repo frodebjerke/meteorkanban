@@ -1,11 +1,22 @@
 <template name="description">
 {{# each tasks}}
-<div class="description row-fluid {{show}}">
-  <div class="span10 offset1">
-    <h1>{{name}}</h1>
+<div class="description {{show}}">
+  <div class="header row-fluid">
+    <div class="span10 offset1">
+      <h1><em>Details for task </em>`{{name}}´</h1>
+    </div>
+    <div class="span1">
+      <a href="#" class="show_edit"><i class="icon-edit"></i></a>
+      <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
+    </div>
   </div>
-  <div class="span1">
-    <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
+  <div class="row-fluid {{hide_edit}}">
+    <div class="edit span10 offset1">
+      <h4>Edit</h4>
+      <textarea class="input-xxlarge addDescription" rows="3" placeholder="Add a description" value="{{description}}"></textarea><br/>
+      <button type="submit" class="editSubmit btn btn-primary">Save changes</button>
+      <button type="button" class="editCancel btn">Cancel</button>
+    </div>
   </div>
 </div>
 {{/each}}
