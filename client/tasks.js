@@ -7,11 +7,17 @@ if (Meteor.isClient) {
   };
 
   Template.tasks.events({
+    'click .desc' : function () {
+      console.log("tasks event");
+      Session.set("task_in_desc", this._id);
+    }
+  });
+  
+  Template.tasks.events({
     'click .moveLeft' : function () {
       Tasks.update(this._id, {$inc: {position: -1}});
     }
   });
-
   Template.tasks.events({
     'click .moveRight' : function () {
       Tasks.update(this._id, {$inc: {position: 1}});

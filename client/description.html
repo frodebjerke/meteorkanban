@@ -1,9 +1,11 @@
 <template name="description">
 {{# each tasks}}
-<div class="row-fluid" {{show}}>
-  <div class="span11 offset1">
+<div class="description row-fluid" {{show}}>
+  <div class="span10 offset1">
     <h1>{{name}}</h1>
-    <p>{{show}}</p>
+  </div>
+  <div class="span1">
+    <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
   </div>
 </div>
 {{/each}}
