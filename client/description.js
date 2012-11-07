@@ -17,8 +17,6 @@ if (Meteor.isClient) {
     return (this.description == null || Session.equals("show_edit_desc", true) ) ? "hide" : "";
   };
 
-  
-
   Template.description.events({
     'click .show_edit' : function () {
       Session.set("show_edit_desc", true);

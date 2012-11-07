@@ -1,13 +1,22 @@
 <template name="tasks">
 {{# each tasks}}
-<div class="task row-fluid {{highlight}}">
-  <div class="span8 offset1">
+<div class="task {{what_priority}} row-fluid {{highlight}}">
+  <div class="name span7 offset1">
     {{name}}
   </div>
-  <div class="span3">
-    <a href="#" class="desc"><i class="icon-plus"></i></a>
-    <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>    
-    <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a>
+  <div class="span4">
+    <div class="updown span2">
+      <a href="#" class="increase"><i class="icon-chevron-up"></i></a><br/> 
+      <a href="#" class="decrease"><i class="icon-chevron-down"></i></a>
+    </div>
+    <div class="toolbar">
+      <div class="span5">
+	<a href="#" class="priority"><i class="">{{what_priority}}</i></a>
+      </div>
+      <a href="#" class="desc"><i class="icon-plus"></i></a>
+      <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>    
+      <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a>
+    </div>
   </div>
 </div>
 {{/each}}
