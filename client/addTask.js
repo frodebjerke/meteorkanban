@@ -8,7 +8,8 @@ if (Meteor.isClient) {
     'click .addTaskSubmit' : function () {
       var inp = $('.addTaskName').val();
       $('.addTaskName').val("");
-      Tasks.insert({name: inp, done: false, position: 1, priority: "high"});
+      var id = Tasks.insert({name: inp, done: false, position: 1, priority: "high"});
+      Session.set("task_in_desc", id);      
     }
   });
 }
