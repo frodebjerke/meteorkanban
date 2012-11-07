@@ -1,6 +1,7 @@
 
 .description {background: #DDDDFF; border: solid 1px #BBBBFF; padding-bottom: 30px; margin-bottom: 30px;}
-.description .header {background: #DDDDFF;}
-.description .edit {background: #DDFFFF; padding: 0 30px 15px;}
+.description .header {background: #BBBBFF;}
+.description .edit {background: #DDFFFF; padding: 0 30px 15px; margin-top: 30px;}
+.description .details {background: #EEEEFF; padding: 0 30px 15px; margin-top: 30px;}
 .description i {margin-top: 23px;}
-.description h1 em {color: #8888FF;}
+.description h1 em {color: #DDDDFF;}

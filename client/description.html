@@ -10,12 +10,18 @@
       <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
     </div>
   </div>
-  <div class="row-fluid {{hide_edit}}">
-    <div class="edit span10 offset1">
-      <h4>Edit</h4>
-      <textarea class="input-xxlarge addDescription" rows="3" placeholder="Add a description" value="{{description}}"></textarea><br/>
-      <button type="submit" class="editSubmit btn btn-primary">Save changes</button>
-      <button type="button" class="editCancel btn">Cancel</button>
+  <div class="row-fluid">
+    <div class="span7 offset1">
+      <div class="edit {{hide_edit}}"> 
+	{{> editTask}}
+      </div>
+      <div class="details {{not_hiding_edit}}">
+	<h2>Description</h2>
+	{{description}}
+      </div>
+    </div>
+    <div class="details span3">
+      <<<<>>>>
     </div>
   </div>
 </div>
