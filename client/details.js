@@ -9,11 +9,11 @@ if (Meteor.isClient) {
     };
 
     Template.details.hide_edit = function () {
-        return (this.details == null || Session.equals("show_edit_desc", true) ) ? "" : "hide";
+        return (this.description == null || Session.equals("show_edit_desc", true) ) ? "" : "hide";
     };
 
     Template.details.not_hiding_edit = function () {
-        return (this.details == null || Session.equals("show_edit_desc", true) ) ? "hide" : "";
+        return (this.description == null || Session.equals("show_edit_desc", true) ) ? "hide" : "";
     };
 
     Template.details.events({
