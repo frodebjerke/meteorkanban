@@ -1,12 +1,12 @@
 <template name="tasks">
   {{# each tasks}}
-  <div class="task row-fluid">
-    <div class="span12">
+  <div class="task row-fluid {{what_priority}}">
+    <div class="span10 offset1">
       <div class="row-fluid">
         <div class="span12">
           <h5>{{name}}</h5>
           <div class="toolbar">
-            <a href="#" class="priority"><i class="">{{what_priority}}</i></a>
+            {{what_priority}}
             <a href="#" class="toggleShowDetails"><i class="icon-plus"></i></a>
             <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>
             <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a></div>

@@ -4,7 +4,14 @@
     <div class="state span{{state_width}}">
       <h1>{{name}}</h1>
       {{> tasks}}
-      {{> addTask}}
+      <div class="state-addTaskTo">
+        <div class="{{show_addTaskPlaceholder}}">
+          <a href="#" class="showAddTask"><i class="icon-plus"></i></a>
+        </div>
+        <div class="{{show_addTask}}">
+          {{> addTask}}
+        </div>
+      </div>
     </div>
     {{/each}}
   </div>

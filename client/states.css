@@ -1,2 +1,5 @@
 .states {}
-.state {}
+.state {border-bottom: 2px solid #cccccc;}
+.state h1 {text-align: center;}
+
+.state-addTaskTo {text-align: center; padding: 1em 0em; background: #dde5dd}

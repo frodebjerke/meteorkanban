@@ -2,6 +2,6 @@
 .task h5 {display: inline;}
 .task .toolbar {float: right;}
 
-.Critical {}
-.High {}
-.Low {}
+.Critical {background: #e9e0dd;}
+.High {background: #e5e0dd;}
+.Low {background: #dde0e5;}
