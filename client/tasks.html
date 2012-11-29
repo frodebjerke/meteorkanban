@@ -1,23 +1,23 @@
 <template name="tasks">
-{{# each tasks}}
-<div class="task {{what_priority}} row-fluid {{highlight}}">
-  <div class="name span7 offset1">
-    {{name}}
-  </div>
-  <div class="span4">
-    <div class="updown span2">
-      <a href="#" class="increase"><i class="icon-chevron-up"></i></a><br/> 
-      <a href="#" class="decrease"><i class="icon-chevron-down"></i></a>
-    </div>
-    <div class="toolbar">
-      <div class="span5">
-	<a href="#" class="priority"><i class="">{{what_priority}}</i></a>
+  {{# each tasks}}
+  <div class="task row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span12">
+          <h5>{{name}}</h5>
+          <div class="toolbar">
+            <a href="#" class="priority"><i class="">{{what_priority}}</i></a>
+            <a href="#" class="toggleShowDetails"><i class="icon-plus"></i></a>
+            <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>
+            <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a></div>
+        </div>
       </div>
-      <a href="#" class="desc"><i class="icon-plus"></i></a>
-      <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>    
-      <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a>
+      <div class="row-fluid {{showDetails}}">
+        <div class="span12">
+          {{> details}}
+        </div>
+      </div>
     </div>
   </div>
-</div>
-{{/each}}
+  {{/each}}
 </template>

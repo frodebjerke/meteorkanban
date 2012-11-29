@@ -1,8 +1,5 @@
 if (Meteor.isClient) {
 
-    Template.details.show = function () {
-        return Session.equals("task_in_desc", this._id) ? "" : "hide";
-    };
 
     Template.details.tasks = function () {
         return Tasks.find();
@@ -28,10 +25,4 @@ if (Meteor.isClient) {
         }
     })
 
-    Template.details.events({
-        'click .hideDesc':function () {
-            Session.set("task_in_desc", null);
-            Session.set("show_edit_desc", false);
-        }
-    });
 }

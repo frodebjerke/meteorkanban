@@ -1,29 +1,10 @@
 <template name="details">
-{{# each tasks}}
-<div class="details {{show}}">
-  <div class="header row-fluid">
-    <div class="span10 offset1">
-      <h1><em>Details for task </em>`{{name}}´</h1>
-    </div>
-    <div class="span1">
-      <a href="#" class="show_edit"><i class="icon-pencil"></i></a>
-      <a href="#" class="delete"><i class="icon-trash"></i></a>
-      <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
-    </div>
-  </div>
-  <div class="row-fluid">
-    <div class="span7 offset1">
-      <div class="edit {{hide_edit}}"> 
-	{{> editTask}}
-      </div>
-      <div class="details {{not_hiding_edit}}">
-	<h2>Description</h2>
-	{{description}}
-      </div>
-    </div>
-    <div class="details span3">
-    </div>
-  </div>
-</div>
-{{/each}}
+
+  Details for task {{name}}
+  <a href="#" class="show_edit"><i class="icon-pencil"></i></a>
+  <a href="#" class="delete"><i class="icon-trash"></i></a>
+  <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
+  {{> editTask}}
+  Description
+  {{description}}
 </template>

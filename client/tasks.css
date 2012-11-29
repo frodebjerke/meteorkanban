@@ -1,6 +1,7 @@
-.task {border-bottom: solid 5px #BBBBFF;}
-.task .name, .task .toolbar {padding-top: 10px;}
+.task {border-bottom: 1px solid #cccccc;}
+.task h5 {display: inline;}
+.task .toolbar {float: right;}
 
-.Critical {background: #FFBBBB;}
-.High {background: #FFDDDD;}
-.Low {background: #DDDDFF;}
+.Critical {}
+.High {}
+.Low {}
