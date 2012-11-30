@@ -22,32 +22,10 @@ if (Meteor.isClient) {
     };
 
     Template.tasks.events({
-        'click .increase':function () {
-            Tasks.update(this._id, {$inc:{priority:-1}});
-        }
-    });
 
-    Template.tasks.events({
-        'click .decrease':function () {
-            Tasks.update(this._id, {$inc:{priority:1}});
-        }
-    });
-
-    Template.tasks.events({
         'click .toggleShowDetails':function () {
-            console.log(Session.get("Details" + this._id));
-            Session.set("Details" + this._id, Session.get("Details" + this._id) == false ? true : false);
-        }
-    });
-
-    Template.tasks.events({
-        'click .moveLeft':function () {
-            Tasks.update(this._id, {$inc:{position:-1}});
-        }
-    });
-    Template.tasks.events({
-        'click .moveRight':function () {
-            Tasks.update(this._id, {$inc:{position:1}});
+            console.log("Clicked toggle: "+Session.get("Details" + this._id));
+            Session.set("Details" + this._id, Session.get("Details" + this._id) == true ? false : true);
         }
     });
 }

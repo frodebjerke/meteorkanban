@@ -1,22 +1,7 @@
-var count = 0;
-
-function addTaskLOL(e, stateId) {
-
-    console.log("hello");
-    if ((e.type == "keydown" && e.keyCode == 13) || e.type == "blur") {
-        if (getAddTaskName() != "") {
-            Tasks.insert({name:getAddTaskName(), done:false, state:stateId, priority:2});
-            Session.set("AddTask" + this._id, false);
-            $('.addTaskName').val("");
-            console.log($('.addTaskName').val());
-        }
-    }
-};
-
 if (Meteor.isClient) {
 
     Template.addTask.text = function () {
-        return "Add a new task to.";
+        return "Add a new task to "+this.name+".";
     };
 
     Template.addTask.events({

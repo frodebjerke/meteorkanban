@@ -14,14 +14,29 @@ if (Meteor.isClient) {
     };
 
     Template.details.events({
+
         'click .show_edit':function () {
             Session.set("show_edit_desc", true);
-        }
-    });
+        },
 
-    Template.details.events({
         'click .delete' : function () {
             Tasks.remove(this._id);
+        },
+
+        'click .increase':function () {
+            Tasks.update(this._id, {$inc:{priority:-1}});
+        },
+
+        'click .decrease':function () {
+            Tasks.update(this._id, {$inc:{priority:1}});
+        },
+
+        'click .moveLeft':function () {
+            Tasks.update(this._id, {$inc:{position:-1}});
+        },
+
+        'click .moveRight':function () {
+            Tasks.update(this._id, {$inc:{position:1}});
         }
     })
 
