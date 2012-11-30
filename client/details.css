@@ -1,7 +1,2 @@
-
-.details {background: #DDDDFF; border: solid 1px #BBBBFF; padding-bottom: 30px; margin-bottom: 30px;}
-.details .header {background: #BBBBFF;}
-.details .edit {background: #DDFFFF; padding: 0 30px 15px; margin-top: 30px;}
-.details .details {background: #EEEEFF; padding: 0 30px 15px; margin-top: 30px;}
-.details i {margin-top: 23px;}
-.details h1 em {color: #DDDDFF;}
+.details-toolbar {text-align: center;}
+.editDescription {background: #dde0dd;}

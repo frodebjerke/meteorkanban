@@ -6,10 +6,10 @@ if (Meteor.isClient) {
 
     Template.addTask.events({
         'keypress .addTaskName, blur .addTaskName':function (event, template) {
-            console.log(event.type + " " + event.keyCode);
-            if (event.type == "blur" || event.keyCode == 13) {
+            if (EventHelpers.eventIsBlurOrKeypressEnter(event)) {
+
                 if (template.find("input[class=addTaskName]").value != "") {
-                    console.log("new id: " + Tasks.insert({name:template.find("input[class=addTaskName]").value, done:false, state:this._id, priority:2}));
+                    Tasks.insert({name:template.find("input[class=addTaskName]").value, done:false, state:this._id, priority:2});
                     $(".addTaskName").val("");
                 }
             }

@@ -24,7 +24,6 @@ if (Meteor.isClient) {
     Template.tasks.events({
 
         'click .toggleShowDetails':function () {
-            console.log("Clicked toggle: "+Session.get("Details" + this._id));
             Session.set("Details" + this._id, Session.get("Details" + this._id) == true ? false : true);
         }
     });
