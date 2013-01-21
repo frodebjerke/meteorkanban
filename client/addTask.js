@@ -9,7 +9,7 @@ if (Meteor.isClient) {
             if (EventHelpers.eventIsBlurOrKeypressEnter(event)) {
 
                 if (template.find("input[class=addTaskName]").value != "") {
-                    Tasks.insert({name:template.find("input[class=addTaskName]").value, done:false, state:this._id, priority:2});
+                    Tasks.insert({name:template.find("input[class=addTaskName]").value, done:false, state:this._id, priority:2, position: 1});
                     $(".addTaskName").val("");
                 }
             }
