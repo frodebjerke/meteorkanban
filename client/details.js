@@ -26,10 +26,9 @@ if (Meteor.isClient) {
 
     Template.details.events({
 
-        'keypress .editDescription, blur .editDescription' : function (event, template) {
+        'keypress .editDescription, blur .editDescription, dblclick .description' : function (event, template) {
             if (EventHelpers.eventIsBlurOrKeypressEnter(event)) {
-                console.log(template);
-                console.log(template.find("textarea[id=editDescription"+this._id+"]"));
+
                 var newDesc = template.find("textarea[id=editDescription"+this._id+"]").value;
                 if (newDesc != undefined) {
                     Tasks.update(this._id, {$set: {description: newDesc}});
@@ -39,7 +38,7 @@ if (Meteor.isClient) {
             }
         },
 
-        'click .toggle_edit':function () {
+        'click .toggle_edit, dblclick .description':function () {
             Session.set("Edit"+this._id, Session.equals("Edit"+this._id, true) ? false : true);
         },
 

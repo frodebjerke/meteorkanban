@@ -3,13 +3,12 @@
   <textarea class="editDescription input-xlarge" id="editDescription{{_id}}" rows="3" placeholder="Enter a description.">{{description}}</textarea>
   {{/if}}
   {{#if not_edit_description}}
-  {{description}}
+  <div class="description">{{description}}</div>
   {{/if}}
 
   <div class="details-toolbar">
     <a href="#" class="toggle_edit"><i class="icon-pencil"></i></a>
     <a href="#" class="delete"><i class="icon-trash"></i></a>
-    <a href="#" class="hideDesc"><i class="icon-remove"></i></a>
     <a href="#" class="moveLeft"><i class="icon-arrow-left"></i></a>
     <a href="#" class="moveRight"><i class="icon-arrow-right"></i></a></div>
   </div>

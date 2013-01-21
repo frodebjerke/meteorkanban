@@ -3,7 +3,7 @@ Tasks = new Meteor.Collection("tasks");
 if (Meteor.isClient) {
 
     Template.tasks.tasks = function () {
-        return Tasks.find({state: this._id}, {sort:{priority:1}});
+        return Tasks.find({state: this._id}, {sort:{priority:1, name: 1}});
     };
 
     Template.tasks.highlight = function () {
